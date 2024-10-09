@@ -1,0 +1,40 @@
+@import "./colors";
+@import "./mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include flex_row;
+  background-color: $background_color;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 50px;
+  height: 50vh;
+}
+
+// =========== Scrollbar Styles ==============
+/* width */
+::-webkit-scrollbar {
+  width: $spacing_sm;
+  height: $spacing_sm;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $light_gray;
+  border-radius: $spacing_lg;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightslategrey;
+}

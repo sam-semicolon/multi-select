@@ -1,0 +1,21 @@
+@import "./variables";
+
+@mixin paper {
+  background-color: white;
+  border-radius: $rounded_xl;
+  border: $border_color 1px solid;
+  padding: $spacing_md;
+}
+
+@mixin flex_row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin text_truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

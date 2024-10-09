@@ -1,0 +1,103 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/variables";
+@import "../../assets/styles/colors";
+
+$box_height: 50px;
+$list_height: 250px;
+$item_height: 45px;
+
+.dropdown {
+  position: relative;
+  min-width: 300px;
+  width: 100%;
+
+  .box {
+    @include paper;
+    @include flex_row;
+    width: 100%;
+    height: $box_height;
+    border-color: $border_color;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .selected_list {
+      @include text_truncate;
+      width: 90%;
+    }
+
+    .arrow {
+      @include flex_row;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(0);
+      transition: transform 0.5s;
+    }
+  }
+
+  .items_container {
+    @include paper;
+    position: absolute;
+    top: 0 + $box_height + $spacing_sm;
+    left: 0;
+    width: 100%;
+    height: auto;
+
+    .items {
+      height: $list_height;
+      padding-right: $spacing_sm;
+      overflow-y: auto;
+
+      .item {
+        @include flex_row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: $rounded_sm;
+        height: $item_height;
+        padding: $spacing_md;
+        margin-top: $spacing_sm;
+        width: 100%;
+        cursor: pointer;
+
+        &_title {
+          @include text_truncate;
+          width: 90%;
+        }
+
+        &_selected_icon {
+          svg {
+            fill: $primary !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.new_input {
+  border: $border_color 1px solid !important;
+  border-radius: $spacing_md;
+  outline: unset !important;
+  width: 100%;
+  height: $item_height;
+  padding-left: $spacing_md;
+  padding-right: $spacing_md;
+  margin-bottom: $spacing_sm;
+}
+
+.rotated {
+  transform: rotate(180deg) !important;
+}
+
+.selected {
+  background-color: $secondary !important;
+  color: $primary !important;
+}
+
+.opened {
+  border: 3px solid $primary !important;
+  outline: 6px solid $secondary !important;
+}
