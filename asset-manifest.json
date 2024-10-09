@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/multi-select/static/css/main.74fbef07.css",
+    "main.js": "/multi-select/static/js/main.fb75d35b.js",
+    "index.html": "/multi-select/index.html",
+    "main.74fbef07.css.map": "/multi-select/static/css/main.74fbef07.css.map",
+    "main.fb75d35b.js.map": "/multi-select/static/js/main.fb75d35b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.74fbef07.css",
+    "static/js/main.fb75d35b.js"
+  ]
+}
